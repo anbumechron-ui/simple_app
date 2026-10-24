@@ -1,0 +1,2284 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d2" for="node" attr.name="page" attr.type="string" />
+  <key id="d1" for="node" attr.name="text" attr.type="string" />
+  <key id="d0" for="node" attr.name="node_type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="chunk_0">
+      <data key="d0">chunk</data>
+      <data key="d1">Spotify-like Web App – Full Architecture &amp; Feature List
+======================================================
+1. Tech Stack Overview
+----------------------
+Frontend:
+- Next.js (React + TypeScript) for SSR/SSG and SPA behavior.
+- Tailwind CSS with a component library (e.g. Headless UI/Radix UI style).
+- React Query (TanStack Query) for server state.
+- Zustand/Recoil/Jotai for global player state.
+- HLS.js + HTML5 Audio / Web Audio API for playback &amp; visualizations.
+- OAuth2 / OIDC-based auth integration with backend.
+- PWA features for installable app and offline caching of some metadata.
+Backend:
+- Node.js + TypeScript.
+- NestJS for modular architecture, DI, microservices support.
+- REST for external APIs, gRPC or message bus (Kafka/NATS/RabbitMQ) for internal communication.
+- API Gateway (Nginx/Envoy/Kong) for routing, rate-limiting, auth at edge.
+Databases &amp; Storage:</data>
+      <data key="d2">1</data>
+    </node>
+    <node id="OAuth2">
+      <data key="d0">entity</data>
+    </node>
+    <node id="HTML5 Audio">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Full Architecture">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Backend">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Jotai">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Feature List">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Storage">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Kafka">
+      <data key="d0">entity</data>
+    </node>
+    <node id="OIDC-based">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Headless UI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Spotify-like Web App">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Zustand">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tailwind CSS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Next.js">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Web Audio API">
+      <data key="d0">entity</data>
+    </node>
+    <node id="TypeScript">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Kong">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Databases">
+      <data key="d0">entity</data>
+    </node>
+    <node id="PWA">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Node.js">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Frontend">
+      <data key="d0">entity</data>
+    </node>
+    <node id="SSG">
+      <data key="d0">entity</data>
+    </node>
+    <node id="NestJS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="React">
+      <data key="d0">entity</data>
+    </node>
+    <node id="APIs">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Envoy">
+      <data key="d0">entity</data>
+    </node>
+    <node id="API Gateway">
+      <data key="d0">entity</data>
+    </node>
+    <node id="React Query">
+      <data key="d0">entity</data>
+    </node>
+    <node id="REST">
+      <data key="d0">entity</data>
+    </node>
+    <node id="NATS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Recoil">
+      <data key="d0">entity</data>
+    </node>
+    <node id="SPA">
+      <data key="d0">entity</data>
+    </node>
+    <node id="HLS.js">
+      <data key="d0">entity</data>
+    </node>
+    <node id="DI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Radix UI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="TanStack Query">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Nginx">
+      <data key="d0">entity</data>
+    </node>
+    <node id="SSR">
+      <data key="d0">entity</data>
+    </node>
+    <node id="RabbitMQ">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tech Stack Overview">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_1">
+      <data key="d0">chunk</data>
+      <data key="d1">- API Gateway (Nginx/Envoy/Kong) for routing, rate-limiting, auth at edge.
+Databases &amp; Storage:
+- PostgreSQL for relational data (users, playlists, subscriptions, etc.).
+- Redis for caching and sessions.
+- Elasticsearch/OpenSearch for full-text search &amp; autocomplete.
+- ClickHouse or similar data warehouse for analytics events.
+- S3-compatible object storage for audio and images.
+- CDN (CloudFront/Fastly/Cloudflare) for asset and audio delivery.
+Infrastructure &amp; DevOps:
+- Docker for containerization.
+- Kubernetes (GKE/EKS/AKS) for orchestration.
+- Vault / Secrets Manager for secrets.
+- CI/CD via GitHub Actions / GitLab CI.
+- Observability via Prometheus + Grafana, central logging, and tracing with OpenTelemetry.
+2. Microservices (High-Level)
+-----------------------------
+1) API Gateway / Backend for Frontend (BFF)
+- Single HTTP entrypoint for clients.</data>
+      <data key="d2">1</data>
+    </node>
+    <node id="Vault">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cloudflare">
+      <data key="d0">entity</data>
+    </node>
+    <node id="OpenTelemetry">
+      <data key="d0">entity</data>
+    </node>
+    <node id="GKE">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Prometheus">
+      <data key="d0">entity</data>
+    </node>
+    <node id="S3-compatible">
+      <data key="d0">entity</data>
+    </node>
+    <node id="CD">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Observability">
+      <data key="d0">entity</data>
+    </node>
+    <node id="BFF">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Single HTTP">
+      <data key="d0">entity</data>
+    </node>
+    <node id="CDN">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Kubernetes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Infrastructure">
+      <data key="d0">entity</data>
+    </node>
+    <node id="AKS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="GitLab CI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Grafana">
+      <data key="d0">entity</data>
+    </node>
+    <node id="High-Level">
+      <data key="d0">entity</data>
+    </node>
+    <node id="CloudFront">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Docker">
+      <data key="d0">entity</data>
+    </node>
+    <node id="ClickHouse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="EKS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="PostgreSQL">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Elasticsearch">
+      <data key="d0">entity</data>
+    </node>
+    <node id="DevOps">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Redis">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Fastly">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Secrets Manager">
+      <data key="d0">entity</data>
+    </node>
+    <node id="GitHub Actions">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Microservices">
+      <data key="d0">entity</data>
+    </node>
+    <node id="CI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="OpenSearch">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_2">
+      <data key="d0">chunk</data>
+      <data key="d1">2. Microservices (High-Level)
+-----------------------------
+1) API Gateway / Backend for Frontend (BFF)
+- Single HTTP entrypoint for clients.
+- Handles auth, rate-limiting, schema validation.
+- Aggregates data from underlying microservices.
+2) Auth &amp; Identity Service
+- User registration/login, password reset, social logins.
+- JWT/opaque token issuance and refresh tokens.
+- Device sessions management.
+- Core tables: users, credentials, sessions, devices.
+3) User Profile Service
+- Manages display name, avatar, profile settings.
+- User preferences (language, explicit content filter, theme).
+- Core tables: user_profile, user_settings.
+4) Catalog Service (Music Metadata)
+- Stores metadata for tracks, albums, artists, genres, moods.
+- Manages relationships: album-track, artist-track, etc.
+- Core tables: artists, albums, tracks, genres, moods, track_audio_files.</data>
+      <data key="d2">1</data>
+    </node>
+    <node id="Catalog Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Handles">
+      <data key="d0">entity</data>
+    </node>
+    <node id="User">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Stores">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Auth">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Core">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Music Metadata">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Device">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Identity Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Manages">
+      <data key="d0">entity</data>
+    </node>
+    <node id="User Profile Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Aggregates">
+      <data key="d0">entity</data>
+    </node>
+    <node id="JWT">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_3">
+      <data key="d0">chunk</data>
+      <data key="d1">5) Search &amp; Discovery Index Service
+- Indexes tracks, albums, artists, playlists, podcasts.
+- Autocomplete suggestions.
+- Powered by Elasticsearch/OpenSearch.
+6) Library &amp; Playlist Service
+- Implements “Your Library” (liked songs, saved albums, followed artists).
+- Manages playlists (create, edit, delete, reorder, collaborative, privacy).
+- Core tables: playlists, playlist_tracks, user_liked_tracks, user_saved_albums,
+user_followed_artists, user_followed_playlists.
+7) Playback &amp; Session Service
+- Stores playback state (current track, position, shuffle, repeat, queue).
+- Manages playback sessions and active devices.
+- Provides WebSocket channel for real-time player updates.
+- Core tables: devices, playback_sessions, playback_queue.
+8) Streaming / Media Delivery Service
+- Generates secure signed URLs to audio HLS manifests/segments.
+- Enforces subscription tier (bitrate, ads vs ad-free).</data>
+      <data key="d2">2</data>
+    </node>
+    <node id="Search">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Provides WebSocket">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Powered">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Playlist Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Discovery Index Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Streaming">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Your Library">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Playback">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Indexes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Enforces">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Implements">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Session Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Library">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Media Delivery Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="HLS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Autocomplete">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Generates">
+      <data key="d0">entity</data>
+    </node>
+    <node id="URLs">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_4">
+      <data key="d0">chunk</data>
+      <data key="d1">- Generates secure signed URLs to audio HLS manifests/segments.
+- Enforces subscription tier (bitrate, ads vs ad-free).
+- Logs stream-start events for analytics.
+9) Recommendation &amp; Personalization Service
+- Personalized homepage and playlists (Discover Weekly-like, Daily Mix, Radios).
+- Computes user and item embeddings using listening history and audio features.
+- Serves recommendations by seeds (artists, tracks, genres).
+10) Social &amp; Activity Service
+- Following system between users.
+- Friend activity feed (“X is listening to…”).
+- Collaborative playlist permissions and activity.
+- Link shortening and share tracking.
+11) Subscription &amp; Billing Service
+- Manages subscription plans (Free, Premium, Family, Student).
+- Integrates with payment gateways (Stripe/Razorpay/etc.).
+- Handles trials, renewals, invoicing, and cancellations.</data>
+      <data key="d2">2</data>
+    </node>
+    <node id="Discover Weekly-like">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Subscription">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Daily Mix">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Recommendation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Computes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Free">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Integrates">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Personalized">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Serves">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Friend">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Premium">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Link">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Collaborative">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Social">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Razorpay">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Stripe">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Student">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Logs">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Personalization Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Activity Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Radios">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Billing Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Family">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Following">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_5">
+      <data key="d0">chunk</data>
+      <data key="d1">- Integrates with payment gateways (Stripe/Razorpay/etc.).
+- Handles trials, renewals, invoicing, and cancellations.
+- Core tables: plans, subscriptions, invoices, payment_methods.
+12) Ads Service (Free Tier)
+- Manages ad campaigns, creatives, and targeting rules.
+- Decides which audio ad to serve.
+- Tracks impressions, clicks, frequency caps.
+- Core tables: ad_campaigns, ad_creatives, ad_impressions, ad_events.
+13) Content Ingestion &amp; Creator Portal Service
+- Artist/label portal: upload tracks, edit metadata, manage catalogs.
+- Podcast ingestion and hosting (episodes, RSS import).
+- Core tables: uploads, rights, creator_profiles, podcasts, episodes.
+14) Media Processor Service
+- Background worker for transcoding uploads (FFmpeg).
+- Creates multiple bitrates and HLS manifests.
+- Generates waveforms, loudness normalization, and audio analysis.</data>
+      <data key="d2">2</data>
+    </node>
+    <node id="Decides">
+      <data key="d0">entity</data>
+    </node>
+    <node id="FFmpeg">
+      <data key="d0">entity</data>
+    </node>
+    <node id="RSS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Artist">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Creates">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Free Tier">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Creator Portal Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Content Ingestion">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ads Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Podcast">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Media Processor Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Tracks">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Background">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_6">
+      <data key="d0">chunk</data>
+      <data key="d1">- Creates multiple bitrates and HLS manifests.
+- Generates waveforms, loudness normalization, and audio analysis.
+- Writes processed files to object storage and notifies Catalog/Streaming services.
+15) Analytics &amp; Events Service
+- Central ingestion point for all user and system events.
+- Stores events in ClickHouse/warehouse.</data>
+      <data key="d2">2</data>
+    </node>
+    <node id="Writes">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Central">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Events Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Analytics">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Catalog">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_7">
+      <data key="d0">chunk</data>
+      <data key="d1">- Provides aggregated analytics for internal dashboards and creator analytics.
+- Feeds Recommendation Service with listening data.
+16) Notification Service
+- Sends emails, push notifications, and in-app notifications.
+- Supports notification templates and user preference management.
+- Digest emails for new releases, playlist updates, etc.
+17) Admin &amp; Backoffice Service
+- Admin panel for staff: user search, content management, moderation.
+- Feature flags and configuration (A/B testing).
+- System metrics and health views.
+3. Data Storage Layout
+----------------------
+PostgreSQL:
+- Users, profiles, subscriptions, playlists, follows.
+- Metadata for tracks, albums, artists (or partially split with a separate catalog DB if
+needed).
+Redis:
+- Authentication/session cache.
+- Playback state cache (optionally).
+- Rate limits and hot metadata caches (trending playlists, top charts).</data>
+      <data key="d2">3</data>
+    </node>
+    <node id="Rate">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Admin">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Supports">
+      <data key="d0">entity</data>
+    </node>
+    <node id="System">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Feature">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Metadata">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Sends">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Feeds Recommendation Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Data Storage Layout">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Backoffice Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Provides">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Digest">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Notification Service">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Users">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Authentication">
+      <data key="d0">entity</data>
+    </node>
+    <node id="DB">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_8">
+      <data key="d0">chunk</data>
+      <data key="d1">Redis:
+- Authentication/session cache.
+- Playback state cache (optionally).
+- Rate limits and hot metadata caches (trending playlists, top charts).
+Elasticsearch/OpenSearch:
+- Full-text index of tracks, artists, albums, playlists, and podcasts.
+- Autocomplete index and suggestion index.
+ClickHouse / Data Warehouse:
+- Playback events (play, pause, skip, complete).
+- Search events and clicks.
+- Aggregations: daily active users, time listened, streams per track, etc.
+Object Storage (S3-like) + CDN:
+- HLS segments and manifests per track and bitrate.
+- Cover images, avatars, thumbnails.
+- Podcast episodes.
+Message Queue (Kafka/NATS/RabbitMQ):
+- track_uploaded, track_encoded, playback_event, subscription_updated, notification events.
+4. Frontend Structure (Next.js)
+-------------------------------
+Key pages/routes:
+- Public:
+  - /           → Landing/marketing page.
+  - /login      → Auth.</data>
+      <data key="d2">3</data>
+    </node>
+    <node id="Full-text">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Data Warehouse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Aggregations">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Object Storage">
+      <data key="d0">entity</data>
+    </node>
+    <node id="S3-like">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Landing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Frontend Structure">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Key">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cover">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Message Queue">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Public">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_9">
+      <data key="d0">chunk</data>
+      <data key="d1">-------------------------------
+Key pages/routes:
+- Public:
+  - /           → Landing/marketing page.
+  - /login      → Auth.
+  - /signup     → Auth.
+  - /artist/:id → Public artist view.
+  - /album/:id  → Public album view or preview.
+- Authenticated app:
+  - /home                       → Personalized home feed.
+  - /search                     → Full search UI.
+  - /collection/tracks          → Liked songs.
+  - /collection/playlists       → User playlists.
+  - /collection/albums          → Saved albums.
+  - /collection/artists         → Followed artists.</data>
+      <data key="d2">3</data>
+    </node>
+    <node id="Authenticated">
+      <data key="d0">entity</data>
+    </node>
+    <node id="UI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Full">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Saved">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Followed">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Liked">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_10">
+      <data key="d0">chunk</data>
+      <data key="d1">- /playlist/:id               → Playlist details &amp; play.
+  - /queue                      → Queue detail (could also be a modal).
+  - /settings/account           → Account info.
+  - /settings/subscription      → Plan &amp; billing.
+  - /settings/privacy           → Content &amp; privacy preferences.
+- Creator portal:
+  - /creator/dashboard
+  - /creator/uploads
+  - /creator/analytics
+- Admin:
+  - /admin                      → Admin dashboard.
+  - /admin/users
+  - /admin/content
+  - /admin/flags
+Global UI components:
+- Persistent bottom player bar.
+- Left navigation (Home, Search, Your Library).
+- Top bar with search, profile dropdown.
+- Queue / Now Playing side panel.
+5. Feature Checklist (Spotify-like)
+-----------------------------------
+A. User &amp; Auth
+- Email/password auth &amp; social login.
+- Email verification &amp; password reset.
+- Profile editing (name, avatar).</data>
+      <data key="d2">4</data>
+    </node>
+    <node id="Account">
+      <data key="d0">entity</data>
+    </node>
+    <node id="A. User">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Persistent">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Email">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Queue">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Home">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Profile">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Plan">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Creator">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Feature Checklist">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Left">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Spotify-like">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Top">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Now Playing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Content">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Global UI">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Playlist">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_11">
+      <data key="d0">chunk</data>
+      <data key="d1">A. User &amp; Auth
+- Email/password auth &amp; social login.
+- Email verification &amp; password reset.
+- Profile editing (name, avatar).
+- Preferences: explicit content, language, theme.
+- Device management and sign-out from all devices.
+B. Playback &amp; Player
+- Play, pause, next, previous, seek.
+- Shuffle &amp; repeat (track, playlist/album).
+- Volume &amp; mute.
+- Playback queue with reorder &amp; removal.
+- Cross-device control and sync.
+- Optional crossfade/gapless playback.
+- Auto-play recommendations when playlist ends.
+C. Library &amp; Playlists
+- Liked songs collection.
+- Create/edit/delete playlists.
+- Public/private/unlisted playlists.
+- Collaborative playlists.
+- Save albums to library.
+- Follow artists and playlists.
+- Sorting and filtering in library.
+D. Catalog &amp; Browsing
+- Detailed artist pages (top songs, albums, related artists).
+- Album pages (track list, total duration).</data>
+      <data key="d2">4</data>
+    </node>
+    <node id="Album">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Cross-device">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Create">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Play">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Save">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Optional">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Volume">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Shuffle">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Preferences">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Follow">
+      <data key="d0">entity</data>
+    </node>
+    <node id="C. Library">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Detailed">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Player">
+      <data key="d0">entity</data>
+    </node>
+    <node id="D. Catalog">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Playlists">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Browsing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Sorting">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Auto-play">
+      <data key="d0">entity</data>
+    </node>
+    <node id="B. Playback">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_12">
+      <data key="d0">chunk</data>
+      <data key="d1">D. Catalog &amp; Browsing
+- Detailed artist pages (top songs, albums, related artists).
+- Album pages (track list, total duration).
+- Browse by genres &amp; moods.
+- New releases and charts.
+- Podcasts &amp; episodes (optional if you want full parity).
+E. Search
+- Unified search (tracks, artists, albums, playlists, podcasts).</data>
+      <data key="d2">4</data>
+    </node>
+    <node id="Browse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="New">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Podcasts">
+      <data key="d0">entity</data>
+    </node>
+    <node id="E. Search">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Unified">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_13">
+      <data key="d0">chunk</data>
+      <data key="d1">- Autocomplete suggestions.
+- Search history and clear history.
+- Filter by content type.
+F. Recommendations &amp; Discovery
+- Personalized home feed.
+- “Because you listened to X” rows.
+- Song Radio and Artist Radio.
+- Auto-generated Daily Mix-style playlists.
+- Weekly discovery playlist (like Discover Weekly).
+G. Social
+- Follow users (friends).
+- Friend activity feed.
+- Collaborative playlists with multiple editors.
+- Share links for tracks, albums, artists, and playlists.
+- Optional embeddable mini-player for shared content.
+H. Subscription / Monetization
+- Free tier (ad-supported with lower bitrate).
+- Premium tier (ad-free, high bitrate, offline for native apps).
+- Payment integration (Stripe/Razorpay/etc.).
+- Plan change flows, cancellations, proration behavior.
+- Billing history and invoices.
+I. Ads (Free Tier)
+- Audio ad slots between tracks.</data>
+      <data key="d2">5</data>
+    </node>
+    <node id="H. Subscription">
+      <data key="d0">entity</data>
+    </node>
+    <node id="G. Social">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Weekly">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Because">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Monetization">
+      <data key="d0">entity</data>
+    </node>
+    <node id="F. Recommendations">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Artist Radio">
+      <data key="d0">entity</data>
+    </node>
+    <node id="I. Ads">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Discover Weekly">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Auto-generated Daily Mix-style">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Song Radio">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Filter">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Audio">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Billing">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Payment">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Share">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Discovery">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_14">
+      <data key="d0">chunk</data>
+      <data key="d1">- Plan change flows, cancellations, proration behavior.
+- Billing history and invoices.
+I. Ads (Free Tier)
+- Audio ad slots between tracks.
+- Targeting rules (location, device, time).
+- Frequency capping and rotation.
+- Campaign analytics (impressions, clicks, conversions).
+J. Creator / Label Portal
+- Artist/label onboarding and verification.
+- Track and album upload flows.
+- Metadata management (ISRC, lyrics, credits).
+- Bulk uploads for labels.
+- Analytics dashboard (streams, listeners, countries, playlists).
+K. Admin / Moderation
+- Search / inspect users and content.
+- Ban/suspend accounts.
+- Takedown and restore content.
+- Abuse reports queue and resolution tools.
+- Feature flags and A/B tests configuration.
+- System status and error monitoring dashboards.
+L. Analytics &amp; Reporting
+- Event tracking for plays, skips, completes, likes, searches, shares.</data>
+      <data key="d2">5</data>
+    </node>
+    <node id="Bulk">
+      <data key="d0">entity</data>
+    </node>
+    <node id="L. Analytics">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Frequency">
+      <data key="d0">entity</data>
+    </node>
+    <node id="ISRC">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Abuse">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Moderation">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Reporting">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Ban">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Label Portal">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Event">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Takedown">
+      <data key="d0">entity</data>
+    </node>
+    <node id="K. Admin">
+      <data key="d0">entity</data>
+    </node>
+    <node id="J. Creator">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Campaign">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Targeting">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Track">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_15">
+      <data key="d0">chunk</data>
+      <data key="d1">- System status and error monitoring dashboards.
+L. Analytics &amp; Reporting
+- Event tracking for plays, skips, completes, likes, searches, shares.
+- DAU/MAU, retention cohorts, time spent listening.
+- Track- and playlist-level performance analytics.
+- Creator- and label-facing analytics.
+- Internal dashboards for product and ops teams.
+M. Security &amp; Compliance
+- HTTPS everywhere, secure cookies, HSTS.
+- Input validation and rate limiting at the gateway.
+- RBAC for admin and internal tools.
+- GDPR-style data export and account deletion.
+- Audit logging for sensitive actions.</data>
+      <data key="d2">5</data>
+    </node>
+    <node id="RBAC">
+      <data key="d0">entity</data>
+    </node>
+    <node id="HTTPS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Compliance">
+      <data key="d0">entity</data>
+    </node>
+    <node id="MAU">
+      <data key="d0">entity</data>
+    </node>
+    <node id="DAU">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Input">
+      <data key="d0">entity</data>
+    </node>
+    <node id="M. Security">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Audit">
+      <data key="d0">entity</data>
+    </node>
+    <node id="GDPR-style">
+      <data key="d0">entity</data>
+    </node>
+    <node id="HSTS">
+      <data key="d0">entity</data>
+    </node>
+    <node id="Internal">
+      <data key="d0">entity</data>
+    </node>
+    <node id="chunk_16">
+      <data key="d0">chunk</data>
+      <data key="d1">This document summarizes the architecture, core services, data layout, frontend structure, and
+feature checklist required to build a large-scale Spotify-like web application capable of
+serving 100,000+ daily users.</data>
+      <data key="d2">6</data>
+    </node>
+    <node id="This">
+      <data key="d0">entity</data>
+    </node>
+    <edge source="chunk_0" target="OAuth2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="HTML5 Audio">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Full Architecture">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Backend">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Jotai">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Feature List">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Storage">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Kafka">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="OIDC-based">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Headless UI">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Spotify-like Web App">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Zustand">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Tailwind CSS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Next.js">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Web Audio API">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="TypeScript">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Kong">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Databases">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="PWA">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Node.js">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Frontend">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="SSG">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="NestJS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="React">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="APIs">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Envoy">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="API Gateway">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="React Query">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="REST">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="NATS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Recoil">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="SPA">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="HLS.js">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="DI">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Radix UI">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="TanStack Query">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Nginx">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="SSR">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="RabbitMQ">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_0" target="Tech Stack Overview">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Backend" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Backend" target="chunk_2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Storage" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Kafka" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Next.js" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Kong" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Databases" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Frontend" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Frontend" target="chunk_2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Envoy" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="API Gateway" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="API Gateway" target="chunk_2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="NATS" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Nginx" target="chunk_1">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="RabbitMQ" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Vault">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Cloudflare">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="OpenTelemetry">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="GKE">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Prometheus">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="S3-compatible">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="CD">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Observability">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="BFF">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Single HTTP">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="CDN">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Kubernetes">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Infrastructure">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="AKS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="GitLab CI">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Grafana">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="High-Level">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="CloudFront">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Docker">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="ClickHouse">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="EKS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="PostgreSQL">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Elasticsearch">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="DevOps">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Redis">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Fastly">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Secrets Manager">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="GitHub Actions">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="Microservices">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="CI">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_1" target="OpenSearch">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="BFF" target="chunk_2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Single HTTP" target="chunk_2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="CDN" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="High-Level" target="chunk_2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="ClickHouse" target="chunk_6">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="ClickHouse" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="PostgreSQL" target="chunk_7">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Elasticsearch" target="chunk_3">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Elasticsearch" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Redis" target="chunk_7">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Redis" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Microservices" target="chunk_2">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="OpenSearch" target="chunk_3">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="OpenSearch" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Catalog Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Handles">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="User">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Stores">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Auth">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Core">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Music Metadata">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Device">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Identity Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Manages">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="User Profile Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="Aggregates">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_2" target="JWT">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Handles" target="chunk_4">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Handles" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="User" target="chunk_9">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Stores" target="chunk_3">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Stores" target="chunk_6">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Auth" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Auth" target="chunk_9">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Auth" target="chunk_10">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Auth" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Core" target="chunk_3">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Core" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Device" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Manages" target="chunk_3">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Manages" target="chunk_4">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Manages" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Search">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Provides WebSocket">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Powered">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Playlist Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Discovery Index Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Streaming">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Your Library">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Playback">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Indexes">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Enforces">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Implements">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Session Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Library">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Media Delivery Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="HLS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Autocomplete">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="Generates">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_3" target="URLs">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Search" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Search" target="chunk_10">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Search" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Search" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Streaming" target="chunk_6">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Your Library" target="chunk_10">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Playback" target="chunk_7">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Playback" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Playback" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Enforces" target="chunk_4">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="HLS" target="chunk_4">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="HLS" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="HLS" target="chunk_6">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="HLS" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Autocomplete" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Autocomplete" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Generates" target="chunk_4">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Generates" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Generates" target="chunk_6">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="URLs" target="chunk_4">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Discover Weekly-like">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Subscription">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Daily Mix">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Recommendation">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Computes">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Free">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Integrates">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Personalized">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Serves">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Friend">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Premium">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Link">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Collaborative">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Social">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Razorpay">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Stripe">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Student">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Logs">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Personalization Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Activity Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Radios">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Billing Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Family">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_4" target="Following">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Free" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Integrates" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Personalized" target="chunk_9">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Personalized" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Friend" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Premium" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Collaborative" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Collaborative" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Razorpay" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Razorpay" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Stripe" target="chunk_5">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Stripe" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Decides">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="FFmpeg">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="RSS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Artist">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Creates">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Free Tier">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Creator Portal Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Content Ingestion">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Ads Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Podcast">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Media Processor Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Tracks">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_5" target="Background">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Artist" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Creates" target="chunk_6">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Free Tier" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Free Tier" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Podcast" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_6" target="Writes">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_6" target="Central">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_6" target="Events Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_6" target="Analytics">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_6" target="Catalog">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Analytics" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Rate">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Admin">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Supports">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="System">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Feature">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Metadata">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Sends">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Feeds Recommendation Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Data Storage Layout">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Backoffice Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Provides">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Digest">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Notification Service">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Users">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="Authentication">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_7" target="DB">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Rate" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Admin" target="chunk_10">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="System" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="System" target="chunk_15">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Feature" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Metadata" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Authentication" target="chunk_8">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Full-text">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Data Warehouse">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Aggregations">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Object Storage">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="S3-like">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Landing">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Frontend Structure">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Key">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Cover">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Message Queue">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_8" target="Public">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Landing" target="chunk_9">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Key" target="chunk_9">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Public" target="chunk_9">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Public" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_9" target="Authenticated">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_9" target="UI">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_9" target="Full">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_9" target="Saved">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_9" target="Followed">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_9" target="Liked">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Liked" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Account">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="A. User">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Persistent">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Email">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Queue">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Home">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Profile">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Plan">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Creator">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Feature Checklist">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Left">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Spotify-like">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Top">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Now Playing">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Content">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Global UI">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_10" target="Playlist">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="A. User" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Email" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Profile" target="chunk_11">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Plan" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Plan" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Creator" target="chunk_15">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Spotify-like" target="chunk_16">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Album">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Cross-device">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Create">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Play">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Save">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Optional">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Volume">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Shuffle">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Preferences">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Follow">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="C. Library">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Detailed">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Player">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="D. Catalog">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Playlists">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Browsing">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Sorting">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="Auto-play">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_11" target="B. Playback">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Album" target="chunk_12">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Optional" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Follow" target="chunk_13">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Detailed" target="chunk_12">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="D. Catalog" target="chunk_12">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Browsing" target="chunk_12">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_12" target="Browse">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_12" target="New">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_12" target="Podcasts">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_12" target="E. Search">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_12" target="Unified">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="H. Subscription">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="G. Social">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Weekly">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Because">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Monetization">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="F. Recommendations">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Artist Radio">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="I. Ads">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Discover Weekly">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Auto-generated Daily Mix-style">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Song Radio">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Filter">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Audio">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Billing">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Payment">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Share">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_13" target="Discovery">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="I. Ads" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Audio" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Billing" target="chunk_14">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Bulk">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="L. Analytics">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Frequency">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="ISRC">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Abuse">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Moderation">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Reporting">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Ban">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Label Portal">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Event">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Takedown">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="K. Admin">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="J. Creator">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Campaign">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Targeting">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_14" target="Track">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="L. Analytics" target="chunk_15">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Reporting" target="chunk_15">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Event" target="chunk_15">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="Track" target="chunk_15">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="RBAC">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="HTTPS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="Compliance">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="MAU">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="DAU">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="Input">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="M. Security">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="Audit">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="GDPR-style">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="HSTS">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_15" target="Internal">
+      <data key="d3">mentioned_in</data>
+    </edge>
+    <edge source="chunk_16" target="This">
+      <data key="d3">mentioned_in</data>
+    </edge>
+  </graph>
+</graphml>
